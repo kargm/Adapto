@@ -1,0 +1,12 @@
+<stack>
+  <description brief="adapto_cram">adapto_cram</description>
+  <author>Maintained by</author>
+  <license>BSD</license>  
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/adapto_cram</url>
+  <depend stack="cram_highlevel" /> <!-- designators_ros, cram_plan_actionserver, cram_roslisp_common, fake_process_modules, location_costmap, cram_plan_knowledge, cram_plan_library -->
+  <depend stack="cram_morse_jido" /> <!-- morse_jido_navigation -->
+  <depend stack="cram_pl" /> <!-- cram_math, cram_reasoning, cram_language, cram_execution_trace, cram_utilities -->
+  <depend stack="ros" />
+
+</stack>

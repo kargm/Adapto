@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/adapto/!svn/ver/90/stacks/adapto_cram/trunk/adapto_executive/src/test
+END
+tutorial-tests-suite.lisp
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/adapto/!svn/ver/90/stacks/adapto_cram/trunk/adapto_executive/src/test/tutorial-tests-suite.lisp
+END
+package.lisp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/adapto/!svn/ver/80/stacks/adapto_cram/trunk/adapto_executive/src/test/package.lisp
+END
+integration-test.asd
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/adapto/!svn/ver/80/stacks/adapto_cram/trunk/adapto_executive/src/test/integration-test.asd
+END

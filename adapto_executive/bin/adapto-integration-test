@@ -1,0 +1,2 @@
+#!/bin/bash
+ROSLISP_CURRENT_PACKAGE=adapto_executive `$ROS_ROOT/bin/rospack find sbcl`/scripts/run-sbcl.sh --noinform --end-runtime-options --noprint --no-userinit --disable-debugger --load /home/kargm/work/ros/adapto/adapto_executive/bin/adapto-integration-test.lisp --end-toplevel-options $*

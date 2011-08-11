@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/adapto/!svn/ver/92/stacks/adapto_cram/trunk/adapto_executive/src
+END
+package.lisp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/adapto/!svn/ver/89/stacks/adapto_cram/trunk/adapto_executive/src/package.lisp
+END
+top-level-plans.lisp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/adapto/!svn/ver/54/stacks/adapto_cram/trunk/adapto_executive/src/top-level-plans.lisp
+END
+process-modules.lisp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/adapto/!svn/ver/92/stacks/adapto_cram/trunk/adapto_executive/src/process-modules.lisp
+END
+adapto-executive.asd
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/adapto/!svn/ver/92/stacks/adapto_cram/trunk/adapto_executive/src/adapto-executive.asd
+END

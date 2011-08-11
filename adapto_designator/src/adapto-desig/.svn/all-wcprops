@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/adapto/!svn/ver/87/stacks/adapto_cram/trunk/adapto_designator/src/adapto-desig
+END
+package.lisp
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/adapto/!svn/ver/87/stacks/adapto_cram/trunk/adapto_designator/src/adapto-desig/package.lisp
+END
+location-designator.lisp
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/adapto/!svn/ver/36/stacks/adapto_cram/trunk/adapto_designator/src/adapto-desig/location-designator.lisp
+END
+map-handler.lisp
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/adapto/!svn/ver/36/stacks/adapto_cram/trunk/adapto_designator/src/adapto-desig/map-handler.lisp
+END

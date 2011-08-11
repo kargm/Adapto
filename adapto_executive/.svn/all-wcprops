@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/adapto/!svn/ver/92/stacks/adapto_cram/trunk/adapto_executive
+END
+manifest.xml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/adapto/!svn/ver/51/stacks/adapto_cram/trunk/adapto_executive/manifest.xml
+END
+mainpage.dox
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/adapto/!svn/ver/48/stacks/adapto_cram/trunk/adapto_executive/mainpage.dox
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/adapto/!svn/ver/62/stacks/adapto_cram/trunk/adapto_executive/CMakeLists.txt
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/adapto/!svn/ver/48/stacks/adapto_cram/trunk/adapto_executive/Makefile
+END

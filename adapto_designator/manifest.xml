@@ -1,0 +1,25 @@
+<package>
+  <description brief="adapto_designator">
+    Tools to resolve designators.
+
+    One purpose of designators is to bridge between symbolic high-level reasoning and low-level processes.
+    Designators get resolved against other datasources, avaible e.g. through ROS topics, services and actions.
+    This ROS package contains the resolutions of designators for adapto.
+
+    This includes some PROLOG predicates to hook into CRAM designator resolution, as well as ROS handlers to collect data from ROS.
+  </description>
+  <author></author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/adapto_designator</url>
+  <depend package="designators"/>
+  <depend package="cl_tf"/>
+  <depend package="cram_reasoning"/>
+  <depend package="location_costmap"/>
+  <depend package="nav_msgs"/>
+  <depend package="cram_language"/>
+  <depend package="roslisp"/>
+  <depend package="cram_roslisp_common"/>
+</package>
+
+

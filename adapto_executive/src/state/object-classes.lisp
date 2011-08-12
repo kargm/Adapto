@@ -1,6 +1,5 @@
 (in-package :ad-exe)
 
-
 ;; general things
 (defclass thing (geometrical-form)
   ( (id :initarg :id :reader id) ))
@@ -42,7 +41,6 @@
 (defclass fork (cutlery spoon-like) ())
 
 (defclass spoon (cutlery spoon-like) ())
-
 
 ; tableware
 (defclass tableware (entity) ())

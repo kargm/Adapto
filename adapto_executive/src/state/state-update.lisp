@@ -28,30 +28,24 @@
               (std_msgs-msg:stamp (geometry_msgs-msg:header data))))
 
 ;; Creates one object from object data
-(defun create-object (obj-data)
-       (destructuring-bind (name type x y z qx qy qz qw) obj-data
-         
+(defun create-object (name type x y z qx qy qz qw )       
+         (cond ((null  (find-class type NIL)) (warn "[state-update.lisp]: Class for type ~a not defined. Mapped to type entity~%" type) (setf type 'entity)) )
          (addgv :kitchen-object name
                 (make-fluent :name name
                              :value (make-instance type
                                       :pose (tf:make-pose-stamped
                                              "map"                         ; frame-id
-                                             0.0                           ; stamp TODO: get in LISP
+                                             (roslisp:ros-time)            ; stamp TODO: get in LISP
                                              (tf:make-3d-vector x y z)     ; translation/origin
-                                             (tf:make-quaternion qx qy qz qw))))))) ; rotation/orientation
-
-;; Gets String with list of objects. Objects have format: ( Name Description x y z qx qy qz qw ) (qx, qy, qz, qw refer to objects' rotation as qaternion )
-(defun create-objects (data)
-   (dolist (obj-data (read-from-string data)) (create-object obj-data)))
+                                             (tf:make-quaternion qx qy qz qw)))))) ; rotation/orientation
 
 ;; Updates Object data from list of objects. Objects have format: ( Name Description x y z qx qy qz qw ) (qx, qy, qz, qw refer to objects' rotation as qaternion )
 ;; TODO: Check if object already exists, if not: create object
 (defun store-object-data (data)
-
-  (dolist (obj-data (read-from-string data))
+  (let ( (*package* (find-package :ad-exe)) )
+  (dolist (obj-data (read-from-string (std_msgs-msg:data data)))
     (destructuring-bind (name type x y z qx qy qz qw) obj-data
-      (declare (ignore type))
-
+      
       (if (isgv :kitchen-object name) 
           (let ( (target-pose (pose [getgv :kitchen-object name])) )
             (setf (tf:x (tf:origin target-pose)) x)
@@ -60,9 +54,11 @@
             (setf (tf:x (tf:orientation target-pose)) qx)
             (setf (tf:y (tf:orientation target-pose)) qy)
             (setf (tf:z (tf:orientation target-pose)) qz)
-            (setf (tf:w (tf:orientation target-pose)) qw))
-          (create-object obj-data)))))
-        ;; (setf (tf:stamp target-pose) stamp)
+            (setf (tf:w (tf:orientation target-pose)) qw)
+            (setf (tf:stamp target-pose) (roslisp:ros-time)))
+          (create-object name type x y z qx qy qz qw))))))
+    
+  
 
 ;;; Objekte:
 ;;; - am Anfang einmal Ground Truth topic abhören (dann unsubscriben), dabei statevars für Objekte erzeugen
@@ -81,7 +77,6 @@
     (when subscribers
       (roslisp:unsubscribe (pop subscribers))
       (stop-statevar-update)))
-
 )
 
 ;(setf (gethash 'start-adapto-statevar-update cram-roslisp-common::*ros-init-functions*)

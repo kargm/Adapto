@@ -9,7 +9,7 @@
   (:shadowing-import-from #:desig
                           #:name)
   (:import-from :cram-utilities
-                #:create-global-structure #:remove-global-structure #:clear-global-structure
+                #:map-global-structure #:create-global-structure #:remove-global-structure #:clear-global-structure
                 #:addgv #:isgv #:getgv #:setgv #:remgv #:putgv)
   (:import-from :cram-roslisp-common
                 #:startup-ros

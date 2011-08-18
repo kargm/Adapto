@@ -33,6 +33,13 @@
              ( (:file "nav-time-definitions")
                (:file "nav-time-plan" :depends-on ("nav-time-definitions"))
                (:file "nav-cmd-definitions")
-               (:file "nav-cmd-plan" :depends-on ("nav-cmd-definitions")))) ))
+               (:file "nav-cmd-plan" :depends-on ("nav-cmd-definitions"))))
+    (:module "expectations"
+             :depends-on ("package" "state")
+             :components
+             ( (:file "area-classes")
+               (:file "expectation-classes" :depends-on ("area-classes"))
+               (:file "expectation-models" :depends-on ("expectation-classes"))
+               (:file "expectation-validation" :depends-on ("expectation-models")))) ))
 
 

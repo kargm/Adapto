@@ -14,4 +14,4 @@
 (defmethod inside-area (area pose) (error "No inside-area function defined for this kind of area"))
 
 (defmethod inside-area ((area circle) pose)
-  (< (cl-transforms:v-dist (cl-transforms:make-3d-vector (x pose) (y pose) 0) (cl-transforms:make-3d-vector (x area) (y area) 0)) (radius area)))
+  (< (cl-transforms:v-dist (cl-transforms:make-3d-vector (tf:x (cl-transforms:origin pose)) (tf:y (cl-transforms:origin pose)) 0) (cl-transforms:make-3d-vector (x area) (y area) 0)) (radius area)))

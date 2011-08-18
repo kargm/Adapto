@@ -1,18 +1,12 @@
 (in-package :ad-exe)
 
-;; Expectations-instances in the global structure are to be validated by the expectation validation module
-(create-global-structure :expectation)
-
-
-
-;; ;; Create instance of expectation
-
-;; get x-value of a posestamped: (tf:x (tf:origin p1))
-
-;; (addgv :expectation 'human-pose (make-instance 'position-expectation
-;;                                   :pose (tf:make-pose-stamped
-;;                                          "map"
-;;                                          0.0
-;;                                          (tf:make-3d-vector 0 0 0)
-;;                                          (tf:make-quaternion 0 0 0 1))
-;;                                   :radius 5))
+;; Here we define the instances of our expectations and put them into a global structure
+;; For example here: An expectation about the human beeing no more than 6 meters away from Jido
+(defun generate-expectations ()
+  (create-global-structure :expectations)
+  (addgv :expectations 'louis-near-jido (make-instance 'position-expectation
+                                    :area (make-instance 'circle
+                                            :radius 5
+                                            :x (tf:x (tf:origin (pose (value (getgv :robot 'jido)))))
+                                            :y (tf:y (tf:origin (pose (value (getgv :robot 'jido))))))
+                                    :pose (pose (value (getgv :human 'louis))))))
